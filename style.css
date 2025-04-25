@@ -1,0 +1,416 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #e0f7fa, #e8f5e9);
+  color: #333;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.main-header {
+  background-color: #01a49a;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide-text {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.5em;
+}
+
+/* Banner */
+.banner {
+  background: #ffffffc2;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.banner-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.banner-grid div {
+  flex: 1;
+  min-width: 200px;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 12px;
+}
+
+/* FAQ */
+.faq {
+  padding: 40px 0;
+}
+
+.faq h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 15px;
+  background-color: #f1f1f1;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq-answer {
+  display: none;
+  padding: 15px;
+  background-color: #fff;
+  color: #555;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-5px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Ubicación */
+.ubicacion {
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  background-color: #01a49a;
+  color: white;
+  padding: 40px 20px;
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-logo {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+}
+
+/* Scroll Animations */
+.scroll-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-section.visible {
+  opacity: 1;
+  transform: none;
+}
+
+
+.slide {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 0;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slide-text {
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.slide.active .slide-text {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+.quienes-somos {
+  padding: 60px 0;
+  background-color: #ffffffcc;
+  text-align: center;
+}
+
+.quienes-somos h2 {
+  color: #01a49a;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.quienes-somos p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid-quienes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 0;
+}
+
+.qs-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.qs-img {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.qs-img img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.quienes-somos h2 {
+  font-size: 2.2em;
+  color: #01a49a;
+  margin-bottom: 20px;
+}
+
+.quienes-somos p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+
+.ubicacion h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.ubicacion p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.ubicacion iframe {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.footer a.ig-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a.ig-link:hover {
+  text-decoration: underline;
+  color: #80cbc4;
+}
+
+
+.link-banner {
+  color: #01a49a;
+  text-decoration: none;
+}
+
+.link-banner:hover {
+  text-decoration: underline;
+}
+
+.equipo {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.equipo h2 {
+  color: #01a49a;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.equipo-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.equipo-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 200px;
+  transition: transform 0.3s;
+}
+
+.equipo-card:hover {
+  transform: translateY(-5px);
+}
+
+.equipo-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.equipo-card p {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: 0;
+}
+
+
+.clickable-card {
+  transition: all 0.3s ease;
+}
+.clickable-card:hover {
+  background-color: #d0f0e7;
+  transform: scale(1.02);
+}
+.equipo {
+  transition: all 0.4s ease-in-out;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.equipo {
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.clickable-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.clickable-card:hover {
+  background-color: #d0f0e7;
+  transform: scale(1.02);
+}
+
+
+.equipo-lista {
+  margin-top: 15px;
+  text-align: left;
+  padding-left: 15px;
+  font-size: 0.95em;
+}
+
+.equipo-lista ul {
+  margin: 8px 0 0 15px;
+  padding: 0;
+}
+
+.equipo-lista li {
+  margin-bottom: 6px;
+}
+
+.hidden {
+  display: none;
+}
