@@ -109,6 +109,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #555;
 }
 
+.banner-grid h3 {
+  margin-bottom: 10px; /* puedes ajustar el número según te guste más */
+}
+
 .close {
   position: absolute;
   top: 10px;
@@ -328,7 +332,7 @@ nav a:hover {
 }
 
 .footer-logo {
-  width: 50px;
+  width: 230px;
   margin-bottom: 10px;
 }
 
@@ -357,6 +361,16 @@ nav a:hover {
 .footer a.ig-link:hover, .footer a.wsp-link:hover {
   text-decoration: underline;
   color: #80cbc4;
+}
+
+.link-banner {
+  color: #7f969c;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link-banner:hover {
+  color: #6b7e84;
 }
 
 /* Scroll Animations */
