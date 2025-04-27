@@ -8,22 +8,31 @@
   <link rel="icon" href="assets/imagenes/logo.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img id="modal-img" src="" alt="Imagen ampliada">
+    <h3 id="modal-name"></h3>
+    <p id="modal-role"></p>
+  </div>
+</div>
+
 <body>
 
   <!-- ==================== HEADER ==================== -->
   <header class="main-header scroll-section">
-    <div class="container header-content">
-      <img src="assets/imagenes/logo.png" alt="Logo" class="logo" />
-      <h1>Avanza Salud, Centro Terapéutico Integral</h1>
+    <div class="header-banner">
+      <img src="assets/imagenes/BANNER.jpeg" alt="Banner Avanza Salud" class="banner-img" />
     </div>
-  </header>
+  </header>  
 
-  <!-- ==================== SLIDER ==================== -->
-  
-  
-  <!-- ==================== QUIÉNES SOMOS ==================== -->
+<!-- ==================== QUIÉNES SOMOS ==================== -->
   <section class="quienes-somos scroll-section">
     <div class="container grid-quienes">
+      <div class="qs-img">
+        <img src="assets/imagenes/quienes-somos.jpg" alt="Nuestro equipo">
+      </div>
       <div class="qs-texto">
         <h2>¿Quiénes Somos?</h2>
         <p>
@@ -34,11 +43,9 @@
           Creamos un ambiente cálido donde te sentirás escuchado, contenido y acompañado en cada etapa de tu rehabilitación.
         </p>
       </div>
-      <div class="qs-img">
-        <img src="assets/imagenes/quienes-somos.jpg" alt="Nuestro equipo">
-      </div>
     </div>
   </section>
+
 
   <!-- ==================== BANNER ==================== -->
   <section class="banner scroll-section">
@@ -58,18 +65,17 @@
       <div class="equipo-grid">
         <div class="equipo-card">
           <img src="assets/imagenes/persona1.jpg" alt="Persona 1">
-          <p>Luis Zapata Aguilera
-            Kinesiologo</p>
+          <p style="margin: 0;">Anariki Pichún Bello</p>
+          <p style="margin: 0; font-weight: bold;">Kinesióloga</p>
         </div>
         <div class="equipo-card">
           <img src="assets/imagenes/persona2.jpg" alt="Persona 2">
-          <p>Anariki Pichún Bello 
-            Kinesiologa</p>
+          <p style="margin: 0;">Luis Zapata Aguilera</p>
+          <p style="margin: 0; font-weight: bold;">Kinesiólogo</p>
         </div>
       </div>
     </div>
   </section>
-
 
   <!-- ==================== PREGUNTAS FRECUENTES ==================== -->
   <section class="faq container scroll-section">
@@ -109,8 +115,10 @@
     </div>
     <div class="faq-item">
       <button class="faq-question">¿Cómo agendo una hora? <span class="arrow">➕</span></button>
-      <div class="faq-answer">Puedes contactarnos por teléfono, WhatsApp o en nuestras redes sociales. También puedes hacerlo directamente en recepción.</div>
-    </div>
+      <div class="faq-answer">
+        Puedes contactarnos por teléfono, WhatsApp o en nuestras redes sociales. También puedes hacerlo directamente 
+        <a href="https://10a0bab0d536a509f7da143a4891aaa4fb9a0abc.agenda.softwaremedilink.com/agenda/profesional" target="_blank" style="color: #7f969c; font-weight: bold; text-decoration: underline;">aquí</a>.
+      </div>      
 
   </section>
 
@@ -126,9 +134,11 @@
   <footer class="footer scroll-section">
     <div class="container footer-grid">
       <div class="footer-column">
-        <img src="assets/imagenes/logo.png" class="footer-logo" alt="Logo">
-        <p>Avanza Salud<br>+56 9 9287 3938
-          +56 9 8612 9280<br><a href="https://www.instagram.com/clinicavanzasalud/" target="_blank" class="ig-link">@clinicavanzasalud</a></p>
+        <img src="assets/imagenes/logo.png" class="footer-logo" alt="Logo"><br>
+        <a href="https://wa.me/56992873938" target="_blank" class="wsp-link">+56 9 9287 3938</a><br>
+        <a href="https://wa.me/56986129280" target="_blank" class="wsp-link">+56 9 8612 9280</a><br>
+        <a href="https://www.instagram.com/clinicavanzasalud/" target="_blank" class="ig-link">@clinicavanzasalud</a>
+      </p>
       </div>
       <div class="footer-column">
         <h4>ACERCA DE NOSOTROS</h4>

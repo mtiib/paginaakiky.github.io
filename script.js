@@ -68,6 +68,32 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// Modal para ampliar imágenes de Nuestro Equipo
+document.querySelectorAll('.equipo-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const imgSrc = card.querySelector('img').src;
+    const name = card.querySelectorAll('p')[0].textContent;
+    const role = card.querySelectorAll('p')[1].textContent;
+
+    document.getElementById('modal-img').src = imgSrc;
+    document.getElementById('modal-name').textContent = name;
+    document.getElementById('modal-role').textContent = role;
+
+    document.getElementById('modal').classList.remove('hidden');
+  });
+});
+
+// Cerrar el modal
+document.querySelector('.close').addEventListener('click', () => {
+  document.getElementById('modal').classList.add('hidden');
+});
+
+document.getElementById('modal').addEventListener('click', (e) => {
+  if (e.target.id === 'modal') {
+    document.getElementById('modal').classList.add('hidden');
+  }
+});
+
 // Expansión directa dentro del bloque del banner "Nuestro equipo"
 const toggleEquipo = document.getElementById("equipo-toggle");
 const listaEquipo = document.getElementById("equipo-lista");
